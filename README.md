@@ -19,7 +19,6 @@ python3 -m http.server 8000
 - `research.html`：四个研究方向
 - `team.html`：团队成员
 - `publications.html`：24 篇代表性成果与主题筛选
-- `impact.html`：学术影响、荣誉和兼职
 - `join.html`：招生与招聘信息
 - `links.html`：相关学术链接
 - `css/style.css`：响应式样式

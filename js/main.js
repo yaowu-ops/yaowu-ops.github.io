@@ -40,7 +40,10 @@
     let newsIndex = 0;
     function renderNews() {
       const item = news[newsIndex];
-      newsRotator.innerHTML = '<article class="news-item"><div class="news-meta"><span>' + item.year + '</span><span>' + item.type + '</span></div><h3>' + item.title + '</h3><p>' + item.description + '</p><a href="' + item.url + '" target="_blank" rel="noopener noreferrer">查看论文 ↗</a></article><div class="news-controls"><button type="button" class="news-control" data-news-direction="prev" aria-label="上一条动态">←</button><span>' + String(newsIndex + 1).padStart(2, '0') + ' / ' + String(news.length).padStart(2, '0') + '</span><button type="button" class="news-control" data-news-direction="next" aria-label="下一条动态">→</button></div>';
+      const isExternal = /^https?:\/\//.test(item.url);
+      const linkAttrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+      const linkText = isExternal ? '查看论文' : '查看招聘信息';
+      newsRotator.innerHTML = '<article class="news-item"><div class="news-meta"><span>' + item.year + '</span><span>' + item.type + '</span></div><h3>' + item.title + '</h3><p>' + item.description + '</p><a href="' + item.url + '"' + linkAttrs + '>' + linkText + ' ↗</a></article><div class="news-controls"><button type="button" class="news-control" data-news-direction="prev" aria-label="上一条动态">←</button><span>' + String(newsIndex + 1).padStart(2, '0') + ' / ' + String(news.length).padStart(2, '0') + '</span><button type="button" class="news-control" data-news-direction="next" aria-label="下一条动态">→</button></div>';
       newsRotator.querySelectorAll('[data-news-direction]').forEach(function (button) {
         button.addEventListener('click', function () {
           newsIndex = button.dataset.newsDirection === 'next' ? (newsIndex + 1) % news.length : (newsIndex - 1 + news.length) % news.length;
@@ -64,12 +67,20 @@
     function highlightName(authors) {
       return authors.replace(/(Wu, Yao)(\*)?/g, '<strong>$1$2</strong>');
     }
+    function getDirections(paper) {
+      const directions = [];
+      if (paper.themes.includes('burden') || paper.themes.includes('climate')) directions.push('global');
+      if (paper.themes.includes('chronic')) directions.push('chronic');
+      if (paper.themes.includes('omics')) directions.push('genetics');
+      return directions;
+    }
     function renderPublications(filter) {
-      const visible = filter === 'all' ? publications : publications.filter(function (paper) { return paper.themes.includes(filter); });
+      const visible = filter === 'all' ? publications : publications.filter(function (paper) { return getDirections(paper).includes(filter); });
       publicationsList.innerHTML = visible.map(function (paper, index) {
         const doiUrl = 'https://doi.org/' + paper.doi;
-        const labels = { burden: '环境暴露与健康负担', climate: '极端天气与气候健康', chronic: '慢性疾病环境风险', omics: '遗传与多组学' };
-        return '<article class="publication"><div class="publication-number">' + String(index + 1).padStart(2, '0') + '</div><div><h3 class="publication-title">' + paper.title + '</h3><p class="publication-authors">' + highlightName(paper.authors) + '</p><p class="publication-meta"><em>' + paper.journal + '</em>, ' + paper.year + ', ' + paper.detail + '<a href="' + doiUrl + '" target="_blank" rel="noopener noreferrer">DOI ↗</a></p><div class="publication-themes">' + paper.themes.map(function (theme) { return '<span class="publication-theme">' + labels[theme] + '</span>'; }).join('') + '</div></div></article>';
+        const labels = { global: '方向一｜全球健康负担', chronic: '方向二｜慢性疾病风险', genetics: '方向三｜遗传机制' };
+        const directions = getDirections(paper);
+        return '<article class="publication"><div class="publication-number">' + String(index + 1).padStart(2, '0') + '</div><div><h3 class="publication-title">' + paper.title + '</h3><p class="publication-authors">' + highlightName(paper.authors) + '</p><p class="publication-meta"><em>' + paper.journal + '</em>, ' + paper.year + ', ' + paper.detail + '<a href="' + doiUrl + '" target="_blank" rel="noopener noreferrer">DOI ↗</a></p><div class="publication-themes">' + directions.map(function (direction) { return '<span class="publication-theme">' + labels[direction] + '</span>'; }).join('') + '</div></div></article>';
       }).join('');
       count.textContent = '显示 ' + visible.length + ' 篇';
     }
