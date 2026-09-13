@@ -5,3 +5,4 @@
 *.jpeg
 !docs/**/*.png
 *_handoff.md
+docs/*.md
