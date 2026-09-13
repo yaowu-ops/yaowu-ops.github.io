@@ -54,11 +54,23 @@
 
   const sections = document.querySelectorAll('main section[id], header[id]');
   const links = document.querySelectorAll('.nav-link');
+  function setActiveNav(id) {
+    links.forEach(function (link) {
+      const active = link.getAttribute('href') === '#' + id;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+  }
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
-      links.forEach(function (link) { link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id); });
+      setActiveNav(entry.target.id);
     });
   }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
   sections.forEach(function (section) { observer.observe(section); });
+  window.addEventListener('scroll', function () {
+    if (window.scrollY < 160) setActiveNav('home');
+  }, { passive: true });
+  setActiveNav(window.scrollY < 160 ? 'home' : window.location.hash.slice(1) || 'home');
 })();
