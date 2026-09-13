@@ -304,6 +304,7 @@ em { font-family: Georgia, serif; }
 .contact-block { max-width: 860px; padding-top: 44px; }
 .contact-block h2 { margin-bottom: 14px; color: var(--ink); font: 600 24px/1.4 var(--serif); }
 .contact-block p { color: var(--muted); font-size: 15px; }
+.topbar .contact-link { display: none; }
 
 @media (max-width: 900px) {
   .home-profile-grid { gap: 50px; }

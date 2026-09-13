@@ -1,5 +1,6 @@
 (function () {
   const currentPage = document.body.dataset.page || 'home';
+  document.querySelectorAll('.topbar .contact-link').forEach(function (link) { link.remove(); });
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('#nav-menu');
 
