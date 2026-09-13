@@ -307,6 +307,13 @@ em { font-family: Georgia, serif; }
 .topbar .contact-link { display: none; }
 .profile-page .page-content { padding-top: 38px; }
 .profile-page .page-section:first-child { padding-top: 0; }
+.research-page .page-content { padding-top: 38px; }
+.research-intro { max-width: 970px; padding-bottom: 38px; color: var(--ink); border-bottom: 2px solid var(--red); font-size: 18px; line-height: 2; }
+.research-detail-list { max-width: 1050px; }
+.research-detail { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 25px; padding: 38px 0 34px; border-bottom: 1px solid var(--line); }
+.research-detail-number { padding-top: 3px; color: var(--red); font: 500 20px/1 Georgia, serif; }
+.research-detail h2 { margin-bottom: 14px; color: var(--ink); font-size: 22px; line-height: 1.5; }
+.research-detail p { max-width: 940px; margin: 0; color: #4a4745; font-size: 16px; line-height: 2; }
 
 @media (max-width: 900px) {
   .home-profile-grid { gap: 50px; }
@@ -331,6 +338,7 @@ em { font-family: Georgia, serif; }
   .entry-link:last-child { border-bottom: 0; }
   .page-content { padding: 48px 0 70px; }
   .profile-page .page-content { padding-top: 32px; }
+  .research-page .page-content { padding-top: 32px; }
   .page-heading { padding-bottom: 32px; }
   .page-heading h1 { font-size: 34px; }
   .page-heading-row { display: block; }
@@ -340,6 +348,11 @@ em { font-family: Georgia, serif; }
   .research-row { grid-template-columns: 35px minmax(0, 1fr); gap: 13px; padding: 27px 0; }
   .research-row h2 { font-size: 18px; }
   .research-row p { font-size: 14px; }
+  .research-intro { padding-bottom: 28px; font-size: 16px; line-height: 1.9; }
+  .research-detail { grid-template-columns: 30px minmax(0, 1fr); gap: 12px; padding: 28px 0 25px; }
+  .research-detail-number { font-size: 17px; }
+  .research-detail h2 { margin-bottom: 11px; font-size: 18px; }
+  .research-detail p { font-size: 14px; line-height: 1.9; }
   .metrics-row { grid-template-columns: 1fr 1fr; gap: 20px; }
   .metrics-row .metric strong { font-size: 36px; }
   .page-links-grid { margin-top: 35px; }
