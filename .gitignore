@@ -1,0 +1,7 @@
+._*
+*.pdf
+*.png
+*.jpg
+*.jpeg
+!docs/**/*.png
+*_handoff.md
