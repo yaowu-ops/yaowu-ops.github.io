@@ -5,61 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="吴瑶，北京大学环境科学与工程学院研究员、博士生导师、助理教授的个人学术主页。">
   <meta name="theme-color" content="#8c0000">
-  <title>吴瑶｜北京大学环境健康与气候变化研究</title>
+  <title>吴瑶｜北京大学环境健康研究</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main-content">跳转到主要内容</a>
-  <header class="site-header" id="home">
+  <header class="site-header">
     <div class="topbar"><div class="container identity-row">
-      <a class="wordmark" href="#home" aria-label="返回首页"><span class="wordmark-cn">吴瑶</span><span class="wordmark-en">Yao Wu</span></a>
+      <a class="wordmark" href="index.html" aria-label="吴瑶首页"><span class="wordmark-cn">吴瑶</span><span class="wordmark-en">Yao Wu</span></a>
       <div class="identity-meta"><p>研究员 · 博士生导师 · 助理教授</p><p>北京大学环境科学与工程学院环境健康系</p></div>
       <a class="contact-link" href="mailto:yao.wu@pku.edu.cn">yao.wu@pku.edu.cn</a>
     </div></div>
     <nav class="main-nav" aria-label="主导航"><div class="container nav-inner">
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="sr-only">打开导航菜单</span><span></span><span></span><span></span></button>
       <div class="nav-menu" id="nav-menu">
-        <a class="nav-link active" href="#home">首页</a><a class="nav-link" href="#profile">个人简介</a><a class="nav-link" href="#research">研究方向</a><a class="nav-link" href="#team">团队成员</a><a class="nav-link" href="#publications">代表性成果</a><a class="nav-link" href="#impact">学术影响</a><a class="nav-link" href="#join">加入我们</a><a class="nav-link" href="#links">相关链接</a>
+        <a class="nav-link" data-page-link="home" href="index.html">首页</a>
+        <a class="nav-link" data-page-link="profile" href="profile.html">个人简介</a>
+        <a class="nav-link" data-page-link="research" href="research.html">研究方向</a>
+        <a class="nav-link" data-page-link="team" href="team.html">团队成员</a>
+        <a class="nav-link" data-page-link="publications" href="publications.html">代表性成果</a>
+        <a class="nav-link" data-page-link="impact" href="impact.html">学术影响</a>
+        <a class="nav-link" data-page-link="join" href="join.html">加入我们</a>
+        <a class="nav-link" data-page-link="links" href="links.html">相关链接</a>
       </div>
     </div></nav>
   </header>
 
-  <main id="main-content">
-    <section class="hero-section" aria-labelledby="hero-title"><div class="container hero-grid">
-      <div class="hero-copy"><p class="eyebrow">ENVIRONMENTAL HEALTH · CLIMATE CHANGE</p><h1 id="hero-title">理解环境变化，<br><span>守护人群健康</span></h1><p class="hero-lede">以环境流行病学为基础，连接气候变化、极端天气、慢性疾病与遗传和多组学机制，面向全球健康风险评估与精准防控。</p><div class="hero-actions"><a class="button button-primary" href="#research">了解研究方向 <span aria-hidden="true">↓</span></a><a class="button button-text" href="#join">加入研究团队 <span aria-hidden="true">→</span></a></div></div>
-      <aside class="hero-aside" aria-label="办公信息"><div class="aside-rule"></div><p class="aside-label">联系我</p><p>环境大楼 416</p><a href="mailto:yao.wu@pku.edu.cn">yao.wu@pku.edu.cn</a><p class="aside-note">欢迎对环境健康、气候变化与流行病学研究感兴趣的学生和青年学者交流。</p></aside>
-    </div><div class="container hero-bottomline"><span>北京大学 · 环境科学与工程学院</span><span>研究聚焦：气候变化与环境健康</span></div>
-    <div class="container page-index" aria-label="页面目录">
-      <p class="page-index-title">页面目录</p>
-      <div class="page-index-links">
-        <a href="#profile"><span>01</span>个人简介</a>
-        <a href="#research"><span>02</span>研究方向</a>
-        <a href="#team"><span>03</span>团队成员</a>
-        <a href="#publications"><span>04</span>代表性成果</a>
-        <a href="#impact"><span>05</span>学术影响</a>
-        <a href="#join"><span>06</span>加入我们</a>
-        <a href="#links"><span>07</span>相关链接</a>
+  <main id="main-content" class="home-main">
+    <section class="home-profile" aria-labelledby="home-profile-title"><div class="container home-profile-grid">
+      <div>
+        <p class="page-kicker">个人主页</p>
+        <h1 id="home-profile-title">吴瑶</h1>
+        <p class="home-role">研究员 · 博士生导师 · 助理教授</p>
+        <p class="home-bio"><strong>吴瑶</strong>，北京大学环境科学与工程学院研究员、博士生导师、助理教授，入选国家海外高层次青年人才计划。研究主要聚焦气候变化与环境健康领域，重点关注极端天气事件的健康效应与遗传机制。近五年以第一作者身份在 <em>New England Journal of Medicine</em>、<em>The Lancet Planetary Health</em> 等国际权威期刊发表论文20余篇。谷歌学术总引用逾3000次，H-index 33，并担任 <em>BMC Medicine</em>、<em>BMC Public Health</em> 等期刊编委，<em>JAMA Network Open</em>、<em>Nature Health</em> 等期刊审稿人。</p>
+        <p class="home-links"><a href="http://scholar.pku.edu.cn/yao_wu/" target="_blank" rel="noopener noreferrer">北京大学学者主页 ↗</a><a href="mailto:yao.wu@pku.edu.cn">yao.wu@pku.edu.cn</a></p>
       </div>
+      <aside class="home-contact" aria-label="联系信息"><p class="aside-label">联系我</p><p>北京大学环境科学与工程学院<br>环境大楼 416</p><a href="mailto:yao.wu@pku.edu.cn">yao.wu@pku.edu.cn</a></aside>
     </div></section>
 
-    <section class="section section-profile" id="profile" aria-labelledby="profile-title"><div class="container two-column"><div class="section-heading"><p class="section-kicker">01 / PROFILE</p><h2 id="profile-title">个人简介</h2><p class="section-summary">从全球环境暴露到个体健康机制，开展跨尺度、跨学科的环境健康研究。</p></div><div class="section-body"><p class="lead-paragraph">吴瑶，北京大学环境科学与工程学院研究员、博士生导师、助理教授，入选国家海外高层次青年人才计划。研究主要聚焦气候变化与环境健康，重点关注极端天气事件的健康效应与遗传机制。</p><p>以第一作者或通讯作者在 <em>New England Journal of Medicine</em>、<em>The Lancet Planetary Health</em> 等国际期刊发表论文，担任 <em>BMC Medicine</em>、<em>BMC Public Health</em> 期刊编委及多本期刊审稿人。</p><div class="timeline-group"><h3>教育经历</h3><div class="timeline"><div class="timeline-item"><span class="timeline-date">2021.9–2025.7</span><span>蒙纳士大学 · 博士（流行病学）</span></div><div class="timeline-item"><span class="timeline-date">2018.9–2020.7</span><span>北京大学 · 硕士（流行病与卫生统计学）</span></div><div class="timeline-item"><span class="timeline-date">2013.9–2018.7</span><span>北京大学 · 学士（预防医学）</span></div></div></div><div class="timeline-group"><h3>工作经历</h3><div class="timeline"><div class="timeline-item"><span class="timeline-date">2026.6–至今</span><span>北京大学环境科学与工程学院 · 助理教授（研究员）</span></div><div class="timeline-item"><span class="timeline-date">2025.6–2026.6</span><span>澳大利亚蒙纳士大学 · 博士后</span></div><div class="timeline-item"><span class="timeline-date">2020.9–2021.7</span><span>北京大学公共卫生学院 · 研究助理</span></div></div></div></div></div></section>
+    <section class="home-news content-section" aria-labelledby="news-title"><div class="container home-news-grid">
+      <div class="section-heading"><p class="page-kicker">NEWS</p><h2 id="news-title">最新动态</h2></div>
+      <div class="news-rotator" id="news-rotator" aria-live="polite"></div>
+    </div></section>
 
-    <section class="section section-research" id="research" aria-labelledby="research-title"><div class="container"><div class="section-heading section-heading-wide"><p class="section-kicker">02 / RESEARCH</p><h2 id="research-title">研究方向</h2><p class="section-summary">围绕环境暴露与健康风险建立从全球负担评估、队列研究到遗传和多组学机制解析的研究链条。</p></div><div class="research-grid"><article class="research-item"><span class="research-index">01</span><h3>全球环境暴露与健康负担</h3><p>量化非最优温度、野火烟雾、洪水等暴露所致的死亡和疾病负担，融合遥感、地面观测、机器学习与全球多源健康数据，识别不同地区的人群风险差异。</p><span class="research-tags">全球建模 · 暴露评估 · 健康风险</span></article><article class="research-item"><span class="research-index">02</span><h3>极端天气、气候变化与人群健康</h3><p>研究热浪、洪水、野火等极端事件及其复合暴露对人群健康的短期和长期影响，评估气候适应与健康公平，为气候行动和公共卫生政策提供证据。</p><span class="research-tags">极端天气 · 气候适应 · 健康公平</span></article><article class="research-item"><span class="research-index">03</span><h3>慢性疾病的环境危险因素</h3><p>基于英国生物样本库等大型前瞻性队列，考察空气污染与极端气候暴露对心脑血管、呼吸系统和神经退行性疾病发生发展的影响，探索生物衰老与心理应激等中介路径。</p><span class="research-tags">前瞻性队列 · 慢性病 · 中介机制</span></article><article class="research-item"><span class="research-index">04</span><h3>环境暴露的遗传与多组学机制</h3><p>利用双胞胎与家系平台、胞内对照设计和多组学数据，解析环境暴露影响 DNA 甲基化、表观遗传年龄和遗传易感性的路径，寻找可用于个体化干预的生物标志物。</p><span class="research-tags">遗传流行病学 · 表观遗传 · 多组学</span></article></div><div class="method-note"><span>方法基础</span><p>环境流行病学 · 环境暴露评估 · 统计建模 · 健康风险预测 · 人工智能</p></div></div></section>
-
-    <section class="section section-team" id="team" aria-labelledby="team-title"><div class="container two-column team-layout"><div class="section-heading"><p class="section-kicker">03 / TEAM</p><h2 id="team-title">团队成员</h2><p class="section-summary">一个开放、严谨、重视跨学科合作的研究团队正在形成。</p></div><div class="section-body team-body"><div id="members-list" class="members-list"></div><a class="inline-cta" href="#join">查看加入机会 <span aria-hidden="true">→</span></a></div></div></section>
-
-    <section class="section section-publications" id="publications" aria-labelledby="publications-title"><div class="container"><div class="section-heading section-heading-wide publications-header"><div><p class="section-kicker">04 / SELECTED WORKS</p><h2 id="publications-title">代表性成果</h2></div><a class="scholar-link" href="https://scholar.google.com/citations?user=5RVtonUAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></div><div class="publication-toolbar" aria-label="论文筛选"><div class="filter-buttons" role="group" aria-label="按研究主题筛选论文"><button type="button" class="filter-button active" data-filter="all" aria-pressed="true">全部（24）</button><button type="button" class="filter-button" data-filter="burden" aria-pressed="false">环境暴露与健康负担</button><button type="button" class="filter-button" data-filter="climate" aria-pressed="false">极端天气与气候健康</button><button type="button" class="filter-button" data-filter="chronic" aria-pressed="false">慢性疾病环境风险</button><button type="button" class="filter-button" data-filter="omics" aria-pressed="false">遗传与多组学</button></div><p class="publication-count" id="publication-count" aria-live="polite">显示 24 篇</p></div><div id="publications-list" class="publications-list"></div><p class="publication-footnote">* 标记为共同第一作者。完整论文列表及最新引用数据请参阅 <a href="https://scholar.google.com/citations?user=5RVtonUAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>。</p></div></section>
-
-    <section class="section section-impact" id="impact" aria-labelledby="impact-title"><div class="container"><div class="section-heading section-heading-wide"><p class="section-kicker">05 / IMPACT</p><h2 id="impact-title">学术影响</h2></div><div class="impact-grid"><div class="metric"><strong>4,053</strong><span>Google Scholar 总引用</span><small>截至 2026 年 9 月</small></div><div class="metric"><strong>36</strong><span>H-index</span><small>截至 2026 年 9 月</small></div><div class="impact-note"><p>研究成果已被世界经济论坛、世界银行、国际移民组织、国际科学院联盟等政策文件引用，并受到欧盟委员会、<em>The Washington Post</em>、中国日报等媒体关注。</p><a class="inline-cta" href="#links">查看相关链接 <span aria-hidden="true">→</span></a></div></div><div class="impact-details"><div><h3>荣誉奖项</h3><ul><li>蒙纳士大学 2025 年研究生论文发表奖</li><li>《The Innovation》2023–2025 年最佳论文奖</li><li>《Health Data Science》2023 年度审稿人奖</li></ul></div><div><h3>学术兼职</h3><p><em>BMC Medicine</em>、<em>BMC Public Health</em> 期刊编委；为 <em>Nature Health</em>、<em>JAMA Network Open</em>、<em>Environment International</em> 等期刊审稿，累计超过 50 次。</p></div></div></div></section>
-
-    <section class="section section-join" id="join" aria-labelledby="join-title"><div class="container join-layout"><div class="section-heading"><p class="section-kicker">06 / JOIN US</p><h2 id="join-title">加入我们</h2><p class="section-summary">欢迎对环境健康、气候变化与流行病学研究感兴趣的学生和青年学者联系交流。</p></div><div class="opportunities"><div class="opportunity"><span class="opportunity-status">计划招收</span><h3>2027 年专业硕士</h3><p>计划招收一名专业硕士研究生。</p></div><div class="opportunity"><span class="opportunity-status">计划招收</span><h3>2028 年博士研究生</h3><p>计划招收一名博士研究生。</p></div><div class="opportunity"><span class="opportunity-status">持续招募</span><h3>科研助理</h3><p>持续招募全职及兼职科研助理，名额不限。</p></div><div class="opportunity"><span class="opportunity-status">招聘中</span><h3>博士后</h3><p>招聘 1–2 名博士后，欢迎公共卫生、环境流行病学、动物实验、毒理学、人工智能等方向申请。</p></div></div><div class="join-footer"><p>招生、面试和录取以北京大学及相关院系的正式安排为准。</p><a class="button button-primary" href="https://mp.weixin.qq.com/s/1cE_3DFZ_aI_kYix45dg_A" target="_blank" rel="noopener noreferrer">查看详细招聘通知 <span aria-hidden="true">↗</span></a></div></div></section>
-
-    <section class="section section-links" id="links" aria-labelledby="links-title"><div class="container links-layout"><div class="section-heading"><p class="section-kicker">07 / LINKS</p><h2 id="links-title">相关链接</h2></div><div class="links-grid"><a class="external-link" href="https://scholar.google.com/citations?user=5RVtonUAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer"><span>Google Scholar</span><small>论文与引用</small><b aria-hidden="true">↗</b></a><a class="external-link" href="http://scholar.pku.edu.cn/yao_wu/" target="_blank" rel="noopener noreferrer"><span>北京大学学者主页</span><small>官方机构入口</small><b aria-hidden="true">↗</b></a><a class="external-link" href="https://orcid.org/0000-0002-8105-0522" target="_blank" rel="noopener noreferrer"><span>ORCID</span><small>0000-0002-8105-0522</small><b aria-hidden="true">↗</b></a><a class="external-link" href="https://www.researchgate.net/profile/Yao-Wu-24" target="_blank" rel="noopener noreferrer"><span>ResearchGate</span><small>学术交流</small><b aria-hidden="true">↗</b></a></div></div></section>
+    <section class="home-entries content-section"><div class="container entry-grid">
+      <a class="entry-link" href="research.html"><span class="entry-number">01</span><span><strong>了解研究方向</strong><small>气候变化、极端天气与环境健康</small></span><b aria-hidden="true">→</b></a>
+      <a class="entry-link" href="join.html"><span class="entry-number">02</span><span><strong>加入研究团队</strong><small>查看招生、科研助理与博士后机会</small></span><b aria-hidden="true">→</b></a>
+    </div></section>
   </main>
+
   <footer class="site-footer"><div class="container footer-inner"><p><strong>吴瑶 · Yao Wu</strong><br>北京大学环境科学与工程学院</p><p>环境健康 · 气候变化 · 环境流行病学</p><p>© 2026 Yao Wu</p></div></footer>
-  <script src="js/members.js"></script><script src="js/publications.js"></script><script src="js/main.js"></script>
+  <script src="js/news.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
