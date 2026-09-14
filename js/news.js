@@ -14,17 +14,17 @@ const news = [
     url: "join.html"
   },
   {
+  year: "2026",
+  type: "科研成果",
+  title: "极端高温与景观火灾源空气污染复合暴露增加心血管死亡风险的研究发表于 JACC",
+  description: "基于 6 个国家约 590 万条心血管疾病死亡记录，研究发现，热浪与景观火灾源空气污染的复合暴露与 11.5% 的心血管死亡风险增加相关，其中对心力衰竭死亡的叠加影响最为明显。",
+  url: "https://www.sciencedirect.com/science/article/pii/S0735109726067720"
+  },
+  {
     year: "2025",
     type: "科研成果",
     title: "城市绿地与热相关死亡负担的全球建模研究发表于 The Lancet Planetary Health",
     description: "研究评估了城市绿地对热相关死亡负担的潜在影响。",
     url: "https://doi.org/10.1016/S2542-5196(25)00062-2"
-  },
-  {
-    year: "2025",
-    type: "科研成果",
-    title: "野火相关 PM2.5 与表观遗传衰老研究发表于 Journal of Hazardous Materials",
-    description: "基于澳大利亚双胞胎与家系研究，分析野火烟雾暴露与表观遗传衰老之间的关联。",
-    url: "https://doi.org/10.1016/j.jhazmat.2024.136486"
   }
 ];
