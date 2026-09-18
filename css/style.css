@@ -101,9 +101,13 @@ em { font-family: Georgia, serif; }
 .team-body { padding-top: 4px; }
 .members-list { border-top: 1px solid var(--line); }
 .member-empty { display: flex; gap: 24px; padding: 27px 0 26px; border-bottom: 1px solid var(--line); }
-.member-mark { flex: 0 0 auto; color: var(--red); font: 400 35px/1 Georgia, serif; }
+.member-year { flex: 0 0 58px; color: var(--red); font: 400 22px/1 Georgia, serif; letter-spacing: .02em; }
 .member-empty h3 { margin-bottom: 8px; color: var(--ink); font-size: 18px; }
 .member-empty p { max-width: 630px; margin-bottom: 0; color: var(--muted); font-size: 15px; }
+.member-label { color: var(--ink); font-weight: 600; }
+.member-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 14px; }
+.member-link { color: var(--red); font-size: 13px; text-decoration: none; border-bottom: 1px solid transparent; }
+.member-link:hover { border-bottom-color: var(--red); }
 .inline-cta { display: inline-flex; gap: 16px; margin-top: 28px; color: var(--red); font-size: 14px; text-decoration: none; border-bottom: 1px solid var(--red); }
 .inline-cta:hover { color: var(--red-dark); }
 

@@ -28,10 +28,20 @@
   if (memberList && typeof members !== 'undefined') {
     memberList.innerHTML = members.map(function (member) {
       if (member.type === 'notice') {
-        return '<article class="member-empty"><span class="member-mark" aria-hidden="true">+</span><div><h3>' + member.title + '</h3><p>' + member.description + '</p></div></article>';
+        return '<article class="member-empty"><div><h3>' + member.title + '</h3><p>' + member.description + '</p></div></article>';
       }
-      const email = member.email ? '<a href="mailto:' + member.email + '">' + member.email + '</a>' : '';
-      return '<article class="member-empty"><span class="member-mark" aria-hidden="true">+</span><div><h3>' + member.name + '</h3><p>' + (member.role || '') + (member.field ? ' · ' + member.field : '') + '</p><p>' + (member.background || '') + (email ? ' · ' + email : '') + '</p></div></article>';
+      const memberTitle = member.name + (member.role ? '（' + member.role + '）' : '');
+      const fieldMarkup = member.field ? '<p><span class="member-label">研究方向：</span>' + member.field + '</p>' : '';
+      const backgroundMarkup = member.background ? '<p><span class="member-label">研究内容：</span>' + member.background + '</p>' : '';
+      const email = member.email ? '<a class="member-link" href="mailto:' + member.email + '">' + member.email + '</a>' : '';
+      const links = Array.isArray(member.links) ? member.links.map(function (link) {
+        const isExternal = /^https?:\/\//.test(link.url);
+        const linkAttrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return '<a class="member-link" href="' + link.url + '"' + linkAttrs + '>' + link.label + ' ↗</a>';
+      }).join('') : '';
+      const contactMarkup = [email, links].filter(Boolean).join('');
+      const linksMarkup = contactMarkup ? '<div class="member-links" aria-label="邮箱及个人学术链接">' + contactMarkup + '</div>' : '';
+      return '<article class="member-empty"><span class="member-year" aria-label="入职年份">' + (member.year || '') + '</span><div><h3>' + memberTitle + '</h3>' + fieldMarkup + backgroundMarkup + linksMarkup + '</div></article>';
     }).join('');
   }
 
